@@ -36,7 +36,7 @@ Project sudah siap di-deploy langsung menggunakan **Docker** & **docker-compose*
 docker compose up -d --build
 ```
 
-Dashboard akan otomatis aktif di port `3000` (`http://<ip-server-ubuntu>:3000`).
+Dashboard akan otomatis aktif di port `3333` (`http://<ip-server-ubuntu>:3333`).
 
 ---
 
