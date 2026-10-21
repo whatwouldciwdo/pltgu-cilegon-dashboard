@@ -47,6 +47,7 @@ export default function PasswordDirectoryPage() {
   const [passwords, setPasswords] = useState<PasswordItem[]>([]);
   const [logs, setLogs] = useState<AuditLogItem[]>([]);
   const [loading, setLoading] = useState(true);
+  const [fetchError, setFetchError] = useState<string | null>(null);
   const [search, setSearch] = useState('');
   
   // Visibility toggles per row
@@ -72,15 +73,19 @@ export default function PasswordDirectoryPage() {
 
   const fetchPasswords = async () => {
     setLoading(true);
+    setFetchError(null);
     try {
       const res = await fetch('/api/passwords');
       const json = await res.json();
       if (json.success) {
         setPasswords(json.data);
         setLogs(json.logs || []);
+      } else {
+        setFetchError(json.error || 'Terjadi kesalahan saat memuat data dari database.');
       }
-    } catch (err) {
+    } catch (err: any) {
       console.error('Failed to fetch passwords', err);
+      setFetchError(err?.message || 'Gagal menghubungi endpoint /api/passwords.');
     } finally {
       setLoading(false);
     }
@@ -284,6 +289,28 @@ export default function PasswordDirectoryPage() {
             </button>
           </div>
         </div>
+
+        {/* Error Alert if Database Connection fails */}
+        {fetchError && (
+          <div className="mb-6 p-4 rounded-2xl bg-rose-50 border border-rose-200 flex items-start gap-3 text-rose-800 text-xs shadow-sm">
+            <AlertCircle className="w-5 h-5 text-rose-600 shrink-0 mt-0.5" />
+            <div className="flex-1">
+              <p className="font-bold text-sm text-rose-900">Gagal Terhubung ke Database PostgreSQL</p>
+              <p className="mt-1 font-mono text-[11px] text-rose-700 bg-rose-100/70 p-2 rounded-lg border border-rose-200/60 break-all">
+                {fetchError}
+              </p>
+              <p className="mt-2 text-rose-600 text-[11px]">
+                Pastikan IP server database (10.8.140.69) dan kredensial di file .env sudah tepat serta dapat dijangkau dari host container.
+              </p>
+            </div>
+            <button
+              onClick={fetchPasswords}
+              className="px-3 py-1.5 bg-rose-600 text-white font-semibold rounded-xl hover:bg-rose-700 transition cursor-pointer shadow-sm text-xs shrink-0"
+            >
+              Coba Lagi
+            </button>
+          </div>
+        )}
 
         {/* Password Table */}
         <div className="neu-raised rounded-3xl overflow-hidden border border-white/80">

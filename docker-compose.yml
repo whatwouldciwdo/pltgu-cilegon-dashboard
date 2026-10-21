@@ -11,4 +11,4 @@ services:
       - NODE_ENV=production
       - PORT=3000
       - NEXT_PUBLIC_IT_AREA_PASSWORD=${NEXT_PUBLIC_IT_AREA_PASSWORD:-adminit123}
-      - DATABASE_URL=${DATABASE_URL:-postgresql://postgres:password@10.8.140.69:5432/pltgu_vault}
+      - DATABASE_URL=${DATABASE_URL:-postgresql://postgres:Cilego2026.@10.8.140.69:5432/pltgu_vault}

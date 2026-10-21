@@ -16,8 +16,10 @@ export async function GET() {
       logs: logsRes.rows,
     });
   } catch (error: any) {
+    console.error('[API /api/passwords GET error]:', error);
+    const errorMsg = error?.message || error?.code || (typeof error === 'object' ? JSON.stringify(error) : String(error));
     return NextResponse.json(
-      { success: false, error: error.message },
+      { success: false, error: errorMsg, code: error?.code, detail: error?.detail },
       { status: 500 }
     );
   }
@@ -61,8 +63,10 @@ export async function POST(req: Request) {
       data: newRecord,
     });
   } catch (error: any) {
+    console.error('[API /api/passwords GET error]:', error);
+    const errorMsg = error?.message || error?.code || (typeof error === 'object' ? JSON.stringify(error) : String(error));
     return NextResponse.json(
-      { success: false, error: error.message },
+      { success: false, error: errorMsg, code: error?.code, detail: error?.detail },
       { status: 500 }
     );
   }
@@ -123,8 +127,10 @@ export async function PUT(req: Request) {
       data: updatedRecord,
     });
   } catch (error: any) {
+    console.error('[API /api/passwords GET error]:', error);
+    const errorMsg = error?.message || error?.code || (typeof error === 'object' ? JSON.stringify(error) : String(error));
     return NextResponse.json(
-      { success: false, error: error.message },
+      { success: false, error: errorMsg, code: error?.code, detail: error?.detail },
       { status: 500 }
     );
   }
@@ -163,8 +169,10 @@ export async function DELETE(req: Request) {
       message: 'Password berhasil dihapus',
     });
   } catch (error: any) {
+    console.error('[API /api/passwords GET error]:', error);
+    const errorMsg = error?.message || error?.code || (typeof error === 'object' ? JSON.stringify(error) : String(error));
     return NextResponse.json(
-      { success: false, error: error.message },
+      { success: false, error: errorMsg, code: error?.code, detail: error?.detail },
       { status: 500 }
     );
   }

@@ -90,15 +90,9 @@
     "category": "korporat"
   },
   {
-    "name": "IPSAFE",
-    "href": "https://aplikasi.plnindonesiapower.co.id/app/home/redirect/14bfa6bb14875e45bba028a21ed38046",
-    "icon": "https://aplikasi.plnindonesiapower.co.id/app/assets/menu/ipsafe.png",
-    "category": "korporat"
-  },
-  {
-    "name": "Citrix",
-    "href": "https://aplikasi.plnindonesiapower.co.id/app/home/redirect/17e62166fc8586dfa4d1bc0e1742c08b",
-    "icon": "https://aplikasi.plnindonesiapower.co.id/app/assets/menu/citrix.png",
+    "name": "Pengelolaan Dokumen Kebijakan (JDIH)",
+    "href": "https://aplikasi.plnindonesiapower.co.id/app/home/redirect/698d51a19d8a121ce581499d7b701668",
+    "icon": "https://aplikasi.plnindonesiapower.co.id/app/assets/menu/pdk.jpg",
     "category": "korporat"
   },
   {
@@ -108,21 +102,27 @@
     "category": "korporat"
   },
   {
+    "name": "IPSAFE",
+    "href": "https://aplikasi.plnindonesiapower.co.id/app/home/redirect/14bfa6bb14875e45bba028a21ed38046",
+    "icon": "https://aplikasi.plnindonesiapower.co.id/app/assets/menu/ipsafe.png",
+    "category": "korporat"
+  },
+  {
     "name": "Direktori Jabatan (DIRJAB)",
     "href": "https://aplikasi.plnindonesiapower.co.id/app/home/redirect/8e296a067a37563370ded05f5a3bf3ec",
     "icon": "https://aplikasi.plnindonesiapower.co.id/app/assets/menu/dirjab.jpg",
     "category": "korporat"
   },
   {
-    "name": "Pengelolaan Dokumen Kebijakan (JDIH)",
-    "href": "https://aplikasi.plnindonesiapower.co.id/app/home/redirect/698d51a19d8a121ce581499d7b701668",
-    "icon": "https://aplikasi.plnindonesiapower.co.id/app/assets/menu/pdk.jpg",
-    "category": "korporat"
-  },
-  {
     "name": "Compliance Online System (COS)",
     "href": "https://aplikasi.plnindonesiapower.co.id/app/home/redirect/286fe91486142ce24fb3ecb8e724ad0e",
     "icon": "https://aplikasi.plnindonesiapower.co.id/app/assets/menu/cos.png",
+    "category": "korporat"
+  },
+  {
+    "name": "Citrix",
+    "href": "https://aplikasi.plnindonesiapower.co.id/app/home/redirect/17e62166fc8586dfa4d1bc0e1742c08b",
+    "icon": "https://aplikasi.plnindonesiapower.co.id/app/assets/menu/citrix.png",
     "category": "korporat"
   },
   {
@@ -156,9 +156,21 @@
     "category": "korporat"
   },
   {
+    "name": "ProRBA TeamMate",
+    "href": "https://aplikasi.plnindonesiapower.co.id/app/home/redirect/3416a75f4cea9109507cacd8e2f2aefc",
+    "icon": "https://aplikasi.plnindonesiapower.co.id/app/assets/menu/teammate.png",
+    "category": "korporat"
+  },
+  {
     "name": "SAP SF / PMGM",
     "href": "https://aplikasi.plnindonesiapower.co.id/app/home/redirect/e2c420d928d4bf8ce0ff2ec19b371514",
     "icon": "https://aplikasi.plnindonesiapower.co.id/app/assets/menu/sapsf.png",
+    "category": "korporat"
+  },
+  {
+    "name": "CTR",
+    "href": "https://aplikasi.plnindonesiapower.co.id/app/home/redirect/a8f15eda80c50adb0e71943adc8015cf",
+    "icon": "https://aplikasi.plnindonesiapower.co.id/app/assets/menu/ctr.jpg",
     "category": "korporat"
   },
   {
@@ -174,27 +186,15 @@
     "category": "korporat"
   },
   {
-    "name": "CTR",
-    "href": "https://aplikasi.plnindonesiapower.co.id/app/home/redirect/a8f15eda80c50adb0e71943adc8015cf",
-    "icon": "https://aplikasi.plnindonesiapower.co.id/app/assets/menu/ctr.jpg",
-    "category": "korporat"
-  },
-  {
-    "name": "ProRBA TeamMate",
-    "href": "https://aplikasi.plnindonesiapower.co.id/app/home/redirect/3416a75f4cea9109507cacd8e2f2aefc",
-    "icon": "https://aplikasi.plnindonesiapower.co.id/app/assets/menu/teammate.png",
-    "category": "korporat"
-  },
-  {
     "name": "ERBAS",
     "href": "https://aplikasi.plnindonesiapower.co.id/app/home/redirect/19f3cd308f1455b3fa09a282e0d496f4",
     "icon": "https://aplikasi.plnindonesiapower.co.id/app/assets/menu/erbas.jpeg",
     "category": "korporat"
   },
   {
-    "name": "PBR",
-    "href": "https://aplikasi.plnindonesiapower.co.id/app/home/redirect/8023f79073cc8e4794311ae906a6cfa0",
-    "icon": "https://aplikasi.plnindonesiapower.co.id/app/assets/menu/pbr.png",
+    "name": "APPGAN",
+    "href": "https://aplikasi.plnindonesiapower.co.id/app/home/redirect/ac690b072dd937ffe8816f3c7d809556",
+    "icon": "https://aplikasi.plnindonesiapower.co.id/app/assets/menu/appgan.png",
     "category": "korporat"
   },
   {
@@ -204,9 +204,9 @@
     "category": "korporat"
   },
   {
-    "name": "APPGAN",
-    "href": "https://aplikasi.plnindonesiapower.co.id/app/home/redirect/ac690b072dd937ffe8816f3c7d809556",
-    "icon": "https://aplikasi.plnindonesiapower.co.id/app/assets/menu/appgan.png",
+    "name": "PBR",
+    "href": "https://aplikasi.plnindonesiapower.co.id/app/home/redirect/8023f79073cc8e4794311ae906a6cfa0",
+    "icon": "https://aplikasi.plnindonesiapower.co.id/app/assets/menu/pbr.png",
     "category": "korporat"
   },
   {
@@ -222,9 +222,9 @@
     "category": "korporat"
   },
   {
-    "name": "ERP Dev",
-    "href": "https://aplikasi.plnindonesiapower.co.id/app/home/redirect/a87ff679a2f3e71d9181a67b7542122c",
-    "icon": "https://aplikasi.plnindonesiapower.co.id/app/assets/menu/erp.png",
+    "name": "SCM",
+    "href": "https://aplikasi.plnindonesiapower.co.id/app/home/redirect/d9d4f495e875a2e075a1a4a6e1b9770f",
+    "icon": "https://aplikasi.plnindonesiapower.co.id/app/assets/menu/scm.png",
     "category": "korporat"
   },
   {
@@ -234,15 +234,15 @@
     "category": "korporat"
   },
   {
-    "name": "SCM",
-    "href": "https://aplikasi.plnindonesiapower.co.id/app/home/redirect/d9d4f495e875a2e075a1a4a6e1b9770f",
-    "icon": "https://aplikasi.plnindonesiapower.co.id/app/assets/menu/scm.png",
-    "category": "korporat"
-  },
-  {
     "name": "Maximo DEV",
     "href": "https://aplikasi.plnindonesiapower.co.id/app/home/redirect/c20ad4d76fe97759aa27a0c99bff6710",
     "icon": "https://aplikasi.plnindonesiapower.co.id/app/assets/menu/maximo.jpg",
+    "category": "korporat"
+  },
+  {
+    "name": "ERP Dev",
+    "href": "https://aplikasi.plnindonesiapower.co.id/app/home/redirect/a87ff679a2f3e71d9181a67b7542122c",
+    "icon": "https://aplikasi.plnindonesiapower.co.id/app/assets/menu/erp.png",
     "category": "korporat"
   },
   {
@@ -258,15 +258,15 @@
     "category": "korporat"
   },
   {
-    "name": "ProGCG",
-    "href": "https://aplikasi.plnindonesiapower.co.id/app/home/redirect/4e732ced3463d06de0ca9a15b6153677",
-    "icon": "https://aplikasi.plnindonesiapower.co.id/app/assets/menu/gcg.png",
-    "category": "korporat"
-  },
-  {
     "name": "Office 365",
     "href": "https://aplikasi.plnindonesiapower.co.id/app/home/redirect/33e75ff09dd601bbe69f351039152189",
     "icon": "https://aplikasi.plnindonesiapower.co.id/app/assets/menu/office365.png",
+    "category": "korporat"
+  },
+  {
+    "name": "ProGCG",
+    "href": "https://aplikasi.plnindonesiapower.co.id/app/home/redirect/4e732ced3463d06de0ca9a15b6153677",
+    "icon": "https://aplikasi.plnindonesiapower.co.id/app/assets/menu/gcg.png",
     "category": "korporat"
   },
   {
@@ -294,9 +294,9 @@
     "category": "korporat"
   },
   {
-    "name": "ProFKI",
-    "href": "https://aplikasi.plnindonesiapower.co.id/app/home/redirect/42717cd53c698dabd8e6ebc0c62b2628",
-    "icon": "https://aplikasi.plnindonesiapower.co.id/app/assets/menu/profki.png",
+    "name": "TJSL",
+    "href": "https://aplikasi.plnindonesiapower.co.id/app/home/redirect/7f100b7b36092fb9b06dfb4fac360931",
+    "icon": "https://aplikasi.plnindonesiapower.co.id/app/assets/menu/abc.png",
     "category": "korporat"
   },
   {
@@ -306,33 +306,21 @@
     "category": "korporat"
   },
   {
-    "name": "TJSL",
-    "href": "https://aplikasi.plnindonesiapower.co.id/app/home/redirect/7f100b7b36092fb9b06dfb4fac360931",
-    "icon": "https://aplikasi.plnindonesiapower.co.id/app/assets/menu/abc.png",
-    "category": "korporat"
-  },
-  {
-    "name": "ICMS",
-    "href": "https://aplikasi.plnindonesiapower.co.id/app/home/redirect/182be0c5cdcd5072bb1864cdee4d3d6e",
-    "icon": "https://aplikasi.plnindonesiapower.co.id/app/assets/menu/ipems.png",
-    "category": "korporat"
-  },
-  {
-    "name": "Liquid",
-    "href": "https://aplikasi.plnindonesiapower.co.id/app/home/redirect/c24cd76e1ce41366a4bbe8a49b02a028",
-    "icon": "https://aplikasi.plnindonesiapower.co.id/app/assets/menu/liquid.jpeg",
-    "category": "korporat"
-  },
-  {
-    "name": "ePPT",
-    "href": "https://aplikasi.plnindonesiapower.co.id/app/home/redirect/3bfd2aa1152186eb39a2718ea4323c4a",
-    "icon": "https://aplikasi.plnindonesiapower.co.id/app/assets/menu/eppt.png",
+    "name": "ProFKI",
+    "href": "https://aplikasi.plnindonesiapower.co.id/app/home/redirect/42717cd53c698dabd8e6ebc0c62b2628",
+    "icon": "https://aplikasi.plnindonesiapower.co.id/app/assets/menu/profki.png",
     "category": "korporat"
   },
   {
     "name": "Dominion",
     "href": "https://aplikasi.plnindonesiapower.co.id/app/home/redirect/7cbbc409ec990f19c78c75bd1e06f215",
     "icon": "https://aplikasi.plnindonesiapower.co.id/app/assets/menu/dominion.jpg",
+    "category": "korporat"
+  },
+  {
+    "name": "Liquid",
+    "href": "https://aplikasi.plnindonesiapower.co.id/app/home/redirect/c24cd76e1ce41366a4bbe8a49b02a028",
+    "icon": "https://aplikasi.plnindonesiapower.co.id/app/assets/menu/liquid.jpeg",
     "category": "korporat"
   },
   {
@@ -348,9 +336,21 @@
     "category": "korporat"
   },
   {
+    "name": "ePPT",
+    "href": "https://aplikasi.plnindonesiapower.co.id/app/home/redirect/3bfd2aa1152186eb39a2718ea4323c4a",
+    "icon": "https://aplikasi.plnindonesiapower.co.id/app/assets/menu/eppt.png",
+    "category": "korporat"
+  },
+  {
     "name": "Productivity",
     "href": "https://aplikasi.plnindonesiapower.co.id/app/home/redirect/0dcab7fa65ee2813fcb32e3f8c3294ee",
     "icon": "https://aplikasi.plnindonesiapower.co.id/app/assets/menu/productivity.png",
+    "category": "korporat"
+  },
+  {
+    "name": "ICMS",
+    "href": "https://aplikasi.plnindonesiapower.co.id/app/home/redirect/182be0c5cdcd5072bb1864cdee4d3d6e",
+    "icon": "https://aplikasi.plnindonesiapower.co.id/app/assets/menu/ipems.png",
     "category": "korporat"
   },
   {
@@ -363,12 +363,6 @@
     "name": "Solver Batubara",
     "href": "https://aplikasi.plnindonesiapower.co.id/app/home/redirect/6a6f0f083e04c20980a4da44a5cbf8b4",
     "icon": "https://aplikasi.plnindonesiapower.co.id/app/assets/menu/solver.png",
-    "category": "korporat"
-  },
-  {
-    "name": "Research HUB",
-    "href": "https://aplikasi.plnindonesiapower.co.id/app/home/redirect/473df40476322b204b2811369e6dfc3c",
-    "icon": "https://aplikasi.plnindonesiapower.co.id/app/assets/menu/hubip.png",
     "category": "korporat"
   },
   {
@@ -396,9 +390,9 @@
     "category": "korporat"
   },
   {
-    "name": "ProLAK (NEW)",
-    "href": "https://aplikasi.plnindonesiapower.co.id/app/home/redirect/6ea9ab1baa0efb9e19094440c317e21b",
-    "icon": "https://aplikasi.plnindonesiapower.co.id/app/assets/menu/prolakfe.png",
+    "name": "Survey",
+    "href": "https://aplikasi.plnindonesiapower.co.id/app/home/redirect/d02470eb2998b93fd5c91111a7173b74",
+    "icon": "https://aplikasi.plnindonesiapower.co.id/app/assets/menu/survey.png",
     "category": "korporat"
   },
   {
@@ -408,15 +402,27 @@
     "category": "korporat"
   },
   {
-    "name": "Survey",
-    "href": "https://aplikasi.plnindonesiapower.co.id/app/home/redirect/d02470eb2998b93fd5c91111a7173b74",
-    "icon": "https://aplikasi.plnindonesiapower.co.id/app/assets/menu/survey.png",
+    "name": "ProLAK (NEW)",
+    "href": "https://aplikasi.plnindonesiapower.co.id/app/home/redirect/6ea9ab1baa0efb9e19094440c317e21b",
+    "icon": "https://aplikasi.plnindonesiapower.co.id/app/assets/menu/prolakfe.png",
+    "category": "korporat"
+  },
+  {
+    "name": "Research HUB",
+    "href": "https://aplikasi.plnindonesiapower.co.id/app/home/redirect/473df40476322b204b2811369e6dfc3c",
+    "icon": "https://aplikasi.plnindonesiapower.co.id/app/assets/menu/hubip.png",
     "category": "korporat"
   },
   {
     "name": "ProFacility",
     "href": "https://aplikasi.plnindonesiapower.co.id/app/home/redirect/9b04d152845ec0a378394003c96da594",
     "icon": "https://aplikasi.plnindonesiapower.co.id/app/assets/menu/profacility.jpg",
+    "category": "korporat"
+  },
+  {
+    "name": "SIC (Strategic Information Center)",
+    "href": "https://aplikasi.plnindonesiapower.co.id/app/home/redirect/6154cdef3149c189304c247f6ad7f909",
+    "icon": "https://aplikasi.plnindonesiapower.co.id/app/assets/menu/sic.png",
     "category": "korporat"
   },
   {
@@ -429,12 +435,6 @@
     "name": "SIMKPNAS IP",
     "href": "https://aplikasi.plnindonesiapower.co.id/app/home/redirect/c81e728d9d4c2f636f067f89cc14862c",
     "icon": "https://aplikasi.plnindonesiapower.co.id/app/assets/menu/simkpnas.jpg",
-    "category": "korporat"
-  },
-  {
-    "name": "SIC (Strategic Information Center)",
-    "href": "https://aplikasi.plnindonesiapower.co.id/app/home/redirect/6154cdef3149c189304c247f6ad7f909",
-    "icon": "https://aplikasi.plnindonesiapower.co.id/app/assets/menu/sic.png",
     "category": "korporat"
   }
 ]

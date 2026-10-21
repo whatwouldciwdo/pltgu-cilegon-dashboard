@@ -7,7 +7,7 @@ declare global {
 
 const connectionString =
   process.env.DATABASE_URL ||
-  'postgresql://postgres:password@localhost:5432/pltgu_vault';
+  'postgresql://postgres:Cilego2026.@10.8.140.69:5432/pltgu_vault';
 
 export const pool: Pool =
   global.__pgPool ||
