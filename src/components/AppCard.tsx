@@ -6,24 +6,25 @@ import { ExternalLink, Globe, Server, Cpu, KeyRound } from 'lucide-react';
 
 interface AppCardProps {
   app: ApplicationItem;
+  index?: number;
 }
 
-export const AppCard: React.FC<AppCardProps> = ({ app }) => {
+export const AppCard: React.FC<AppCardProps> = ({ app, index = 0 }) => {
   const [imgError, setImgError] = useState(false);
 
   const isInternal = app.href.startsWith('/');
 
   const renderFallbackIcon = () => {
     if (app.href === '/passwords') {
-      return <KeyRound className="w-12 h-12 text-purple-600" />;
+      return <KeyRound className="w-12 h-12 text-purple-600 transition-transform duration-300 group-hover:rotate-12" />;
     }
     switch (app.category) {
       case 'it':
-        return <Server className="w-12 h-12 text-indigo-500/80" />;
+        return <Server className="w-12 h-12 text-indigo-500/80 transition-transform duration-300 group-hover:scale-110" />;
       case 'unit':
-        return <Cpu className="w-12 h-12 text-emerald-500/80" />;
+        return <Cpu className="w-12 h-12 text-emerald-500/80 transition-transform duration-300 group-hover:rotate-6" />;
       default:
-        return <Globe className="w-12 h-12 text-blue-500/80" />;
+        return <Globe className="w-12 h-12 text-blue-500/80 transition-transform duration-300 group-hover:rotate-12" />;
     }
   };
 
@@ -33,12 +34,16 @@ export const AppCard: React.FC<AppCardProps> = ({ app }) => {
     it: 'bg-purple-600 text-white',
   };
 
+  // Stagger calculation capped at 400ms for smooth fluid appearance
+  const animDelay = `${Math.min(index * 35, 420)}ms`;
+
   return (
     <a
       href={app.href}
       target={isInternal ? '_self' : '_blank'}
       rel={isInternal ? undefined : 'noopener noreferrer'}
-      className="neu-raised neu-card-hover rounded-2xl overflow-hidden flex flex-col justify-between group transition-all duration-300 block text-slate-800"
+      style={{ animationDelay: animDelay }}
+      className="animate-fade-in-up neu-raised neu-card-hover rounded-2xl overflow-hidden flex flex-col justify-between group transition-all duration-300 block text-slate-800"
     >
       <div>
         {/* Banner / Gambar Visual Aplikasi */}
@@ -48,11 +53,11 @@ export const AppCard: React.FC<AppCardProps> = ({ app }) => {
             <img
               src={app.icon}
               alt={app.name}
-              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+              className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 ease-out"
               onError={() => setImgError(true)}
             />
           ) : (
-            <div className="w-20 h-20 rounded-2xl neu-pressed flex items-center justify-center">
+            <div className="w-20 h-20 rounded-2xl neu-pressed flex items-center justify-center transition-transform duration-300 group-hover:scale-105">
               {renderFallbackIcon()}
             </div>
           )}
@@ -60,9 +65,9 @@ export const AppCard: React.FC<AppCardProps> = ({ app }) => {
           {/* Badge Kategori Melayang */}
           <div className="absolute top-3 right-3 flex items-center gap-1.5 shadow-sm">
             <span
-              className={`text-[10px] uppercase font-bold tracking-wider px-2.5 py-1 rounded-full shadow-sm ${categoryBadgeColors[app.category]}`}
+              className={`text-[10px] uppercase font-bold tracking-wider px-2.5 py-1 rounded-full shadow-sm transition-transform duration-300 group-hover:scale-105 ${categoryBadgeColors[app.category]}`}
             >
-              {app.category}
+              {app.badge || app.category}
             </span>
           </div>
         </div>
