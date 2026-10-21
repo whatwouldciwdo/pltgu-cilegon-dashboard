@@ -16,8 +16,8 @@
     "category": "unit"
   },
   {
-    "name": "EVI",
-    "description": "Elektronik Verifikasi & Evaluasi Pengendalian Internal",
+    "name": "EVI (Energy Verification & Isolation)",
+    "description": "Manage lockout and tagout",
     "href": "http://10.8.140.67:3009/login",
     "icon": "/logos/evi.webp",
     "badge": "",
