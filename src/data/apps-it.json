@@ -1,0 +1,74 @@
+[
+    {
+        "name":  "Direktori Password IT",
+        "description":  "Brankas kredensial server, IP device, \u0026 audit log perubahan password unit",
+        "href":  "/passwords",
+        "icon":  "",
+        "badge":  "",
+        "category":  "it"
+    },
+    {
+        "name":  "Portainer Docker UI",
+        "description":  "Container management \u0026 orchestration environment internal stack",
+        "href":  "https://10.8.140.67:9443/",
+        "icon":  "",
+        "badge":  "",
+        "category":  "it"
+    },
+    {
+        "name":  "PRTG Network Monitor",
+        "description":  "Network traffic, bandwidth, dan device health monitoring sistem unit",
+        "href":  "https://10.8.140.122/",
+        "icon":  "",
+        "badge":  "",
+        "category":  "it"
+    },
+    {
+        "name":  "Forti Bot Dashboard",
+        "description":  "Sistem monitoring status security, log firewall \u0026 otomasi alert Fortinet",
+        "href":  "http://10.8.140.67:3119/",
+        "icon":  "",
+        "badge":  "",
+        "category":  "it"
+    },
+    {
+        "name":  "Sentra CCTV",
+        "description":  "Monitoring video surveillance \u0026 streaming security kamera unit",
+        "href":  "http://10.8.140.67:8080/",
+        "icon":  "",
+        "badge":  "",
+        "category":  "it"
+    },
+    {
+        "name":  "Bot Pintu Server",
+        "description":  "Sistem kontrol akses, log pintu, dan notifikasi keamanan ruang server",
+        "href":  "http://10.8.140.67:3114/",
+        "icon":  "",
+        "badge":  "",
+        "category":  "it"
+    },
+    {
+        "name":  "Database Aplikasi (pgAdmin4)",
+        "description":  "PostgreSQL database administration and query explorer",
+        "href":  "http://10.8.140.69/pgadmin4",
+        "icon":  "",
+        "badge":  "",
+        "category":  "it"
+    },
+    {
+        "name":  "Zabbix Monitoring",
+        "description":  "Enterprise infrastructure, server metrics \u0026 service alert monitor",
+        "href":  "http://10.8.140.123/zabbix",
+        "icon":  "",
+        "badge":  "",
+        "category":  "it"
+    },
+    {
+        "name":  "Ruijie WLC",
+        "description":  "Wireless LAN Controller manajemen Access Point intranet UBP Cilegon",
+        "href":  "https://10.8.143.252/",
+        "icon":  "",
+        "badge":  "",
+        "category":  "it"
+    }
+]

@@ -1,0 +1,74 @@
+[
+    {
+        "name":  "TOS (Tata Operasi Sistem)",
+        "description":  "Sistem informasi log operasional \u0026 tata kelola shift pembangkit",
+        "href":  "http://10.8.140.67:3120/login",
+        "icon":  "/logos/tos-logo.webp",
+        "badge":  "",
+        "category":  "unit"
+    },
+    {
+        "name":  "Gema Cilegon",
+        "description":  "Portal komunikasi, absensi kegiatan, dan koordinasi internal pegawai",
+        "href":  "http://10.8.140.67:3004/",
+        "icon":  "/logos/gema-logo.jpeg",
+        "badge":  "",
+        "category":  "unit"
+    },
+    {
+        "name":  "EVI",
+        "description":  "Elektronik Verifikasi \u0026 Evaluasi Pengendalian Internal",
+        "href":  "http://10.8.140.67:3009/login",
+        "icon":  "/logos/evi.webp",
+        "badge":  "",
+        "category":  "unit"
+    },
+    {
+        "name":  "Penilaian Inovasi",
+        "description":  "Platform pengajuan dan evaluasi karya inovasi unit UBP Cilegon",
+        "href":  "http://10.8.140.67:3113/",
+        "icon":  "/logos/penilaian-inovasi.png",
+        "badge":  "",
+        "category":  "unit"
+    },
+    {
+        "name":  "CAIR (Cilegon AI \u0026 Intelligent Resource)",
+        "description":  "Platform asisten cerdas berbasis AI internal unit pembangkitan Cilegon",
+        "href":  "http://10.8.140.67:3006/login",
+        "icon":  "/logos/pltgu-hero.webp",
+        "badge":  "",
+        "category":  "unit"
+    },
+    {
+        "name":  "Form Builder Unit",
+        "description":  "Aplikasi dinamis pembuat formulir, survei \u0026 kuesioner kehati UBP Cilegon",
+        "href":  "https://form.kehatipltgucilegon.com",
+        "icon":  "/logos/kehati-ubpcilegon.png",
+        "badge":  "",
+        "category":  "unit"
+    },
+    {
+        "name":  "Website PLTGU Cilegon",
+        "description":  "Portal website resmi keanekaragaman hayati \u0026 profil UBP Cilegon",
+        "href":  "https://kehatipltgucilegon.com",
+        "icon":  "/logos/kehati-ubpcilegon.png",
+        "badge":  "",
+        "category":  "unit"
+    },
+    {
+        "name":  "Whatsapp Gateway",
+        "description":  "Layanan pesan notifikasi otomatis \u0026 gateway broadcast internal",
+        "href":  "http://10.8.140.67:3010/dashboard/",
+        "icon":  "",
+        "badge":  "",
+        "category":  "unit"
+    },
+    {
+        "name":  "SIDOI",
+        "description":  "Sistem Informasi Dokumentasi \u0026 Operasional Internal",
+        "href":  "#",
+        "icon":  "",
+        "badge":  "",
+        "category":  "unit"
+    }
+]
