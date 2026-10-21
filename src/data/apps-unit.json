@@ -64,7 +64,7 @@
     "category": "unit"
   },
   {
-    "name": "Smart KwH Meter",
+    "name": "Smart kWh Meter",
     "description": "Monitoring konsumsi daya & pembacaan meter energi listrik cerdas",
     "href": "http://10.8.140.120/SmartPower/",
     "icon": "/logos/kwh-meter.svg",

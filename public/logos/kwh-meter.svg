@@ -27,7 +27,7 @@
     <circle cx="450" cy="300" r="4" fill="#34d399" />
   </g>
 
-  <!-- Gauge Arc / KwH Meter Graphic -->
+  <!-- Gauge Arc / kWh Meter Graphic -->
   <g transform="translate(320, 150)">
     <!-- Outer Track -->
     <path d="M -70 20 A 75 75 0 1 1 70 20" fill="none" stroke="#134e4a" stroke-width="14" stroke-linecap="round" />
@@ -46,7 +46,7 @@
 
   <!-- Text -->
   <text x="320" y="275" font-family="system-ui, -apple-system, sans-serif" font-size="30" font-weight="800" fill="#ffffff" text-anchor="middle" letter-spacing="0.5">
-    Smart <tspan fill="#34d399">KwH Meter</tspan>
+    Smart <tspan fill="#34d399">kWh Meter</tspan>
   </text>
   <text x="320" y="310" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="500" fill="#a7f3d0" text-anchor="middle" letter-spacing="1.5">
     SMART POWER MONITORING SYSTEM
