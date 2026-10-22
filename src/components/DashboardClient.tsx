@@ -17,8 +17,6 @@ import {
   X,
   LogOut,
   ArrowUp,
-  Activity,
-  Clock,
 } from 'lucide-react';
 
 interface DashboardClientProps {
@@ -32,7 +30,6 @@ export default function DashboardClient({ initialApps }: DashboardClientProps) {
   // Scroll and UI states
   const [scrollProgress, setScrollProgress] = useState(0);
   const [showScrollTop, setShowScrollTop] = useState(false);
-  const [currentTime, setCurrentTime] = useState<string>('');
 
   // Auth state for IT Area
   const [isItAuthenticated, setIsItAuthenticated] = useState(false);
@@ -43,22 +40,8 @@ export default function DashboardClient({ initialApps }: DashboardClientProps) {
   // Default password fallback if not specified in env
   const correctPassword = process.env.NEXT_PUBLIC_IT_AREA_PASSWORD || 'adminit123';
 
-  // Live clock and scroll tracker
+  // Scroll tracker
   useEffect(() => {
-    const updateTime = () => {
-      const now = new Date();
-      setCurrentTime(
-        now.toLocaleTimeString('id-ID', {
-          hour: '2-digit',
-          minute: '2-digit',
-          second: '2-digit',
-          hour12: false,
-        }) + ' WIB'
-      );
-    };
-    updateTime();
-    const timer = setInterval(updateTime, 1000);
-
     const handleScroll = () => {
       const totalHeight = document.documentElement.scrollHeight - window.innerHeight;
       if (totalHeight > 0) {
@@ -70,7 +53,6 @@ export default function DashboardClient({ initialApps }: DashboardClientProps) {
     window.addEventListener('scroll', handleScroll, { passive: true });
 
     return () => {
-      clearInterval(timer);
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
@@ -196,24 +178,8 @@ export default function DashboardClient({ initialApps }: DashboardClientProps) {
             </div>
           </div>
 
-          {/* Center Status indicator & live clock (Desktop) */}
-          <div className="hidden lg:flex items-center gap-3 text-xs text-slate-500 neu-raised px-4 py-2 rounded-2xl border border-white/80">
-            <span className="flex items-center gap-2 text-emerald-700 font-semibold">
-              <span className="relative flex h-2.5 w-2.5">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500"></span>
-              </span>
-              Intranet Normal
-            </span>
-            <span className="text-slate-300">•</span>
-            <span className="font-mono text-slate-600 flex items-center gap-1.5 font-medium">
-              <Clock className="w-3.5 h-3.5 text-blue-500" />
-              {currentTime || 'Memuat...'}
-            </span>
-          </div>
-
           {/* Search Bar - Neumorphic Input */}
-          <div className="relative w-full md:w-80">
+          <div className="relative w-full md:w-96">
             <Search className="absolute left-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-400" />
             <input
               type="text"
