@@ -1,10 +1,19 @@
 import { NextResponse } from 'next/server';
 import { pool } from '@/lib/db';
 
+async function ensurePinnedColumn() {
+  await pool.query(
+    'ALTER TABLE it_passwords ADD COLUMN IF NOT EXISTS is_pinned BOOLEAN NOT NULL DEFAULT FALSE'
+  );
+}
+
 export async function GET() {
   try {
+    await ensurePinnedColumn();
     const passwordsRes = await pool.query(
-      'SELECT id, nama, ip, username, password, keterangan, created_at, updated_at FROM it_passwords ORDER BY id DESC'
+      `SELECT id, nama, ip, username, password, keterangan, is_pinned, created_at, updated_at
+       FROM it_passwords
+       ORDER BY is_pinned DESC, id DESC`
     );
     const logsRes = await pool.query(
       'SELECT id, password_id, action, actor, detail, created_at FROM it_password_audit_logs ORDER BY id DESC LIMIT 50'
@@ -27,6 +36,7 @@ export async function GET() {
 
 export async function POST(req: Request) {
   try {
+    await ensurePinnedColumn();
     const body = await req.json();
     const { nama, ip, username, password, keterangan } = body;
 
@@ -74,6 +84,7 @@ export async function POST(req: Request) {
 
 export async function PUT(req: Request) {
   try {
+    await ensurePinnedColumn();
     const body = await req.json();
     const { id, nama, ip, username, password, keterangan } = body;
 
@@ -128,6 +139,57 @@ export async function PUT(req: Request) {
     });
   } catch (error: any) {
     console.error('[API /api/passwords GET error]:', error);
+    const errorMsg = error?.message || error?.code || (typeof error === 'object' ? JSON.stringify(error) : String(error));
+    return NextResponse.json(
+      { success: false, error: errorMsg, code: error?.code, detail: error?.detail },
+      { status: 500 }
+    );
+  }
+}
+
+export async function PATCH(req: Request) {
+  try {
+    await ensurePinnedColumn();
+    const body = await req.json();
+    const { id, is_pinned } = body;
+
+    if (!Number.isInteger(id) || typeof is_pinned !== 'boolean') {
+      return NextResponse.json(
+        { success: false, error: 'ID dan status pin wajib disertakan!' },
+        { status: 400 }
+      );
+    }
+
+    const updateRes = await pool.query(
+      `UPDATE it_passwords
+       SET is_pinned = $1, updated_at = CURRENT_TIMESTAMP
+       WHERE id = $2
+       RETURNING *`,
+      [is_pinned, id]
+    );
+
+    if (updateRes.rows.length === 0) {
+      return NextResponse.json(
+        { success: false, error: 'Data password tidak ditemukan!' },
+        { status: 404 }
+      );
+    }
+
+    const updatedRecord = updateRes.rows[0];
+    await pool.query(
+      `INSERT INTO it_password_audit_logs (password_id, action, actor, detail)
+       VALUES ($1, $2, $3, $4)`,
+      [
+        id,
+        'UPDATE',
+        'IT Admin',
+        `${is_pinned ? 'Menyematkan' : 'Melepas sematan'} kredensial "${updatedRecord.nama}"`,
+      ]
+    );
+
+    return NextResponse.json({ success: true, data: updatedRecord });
+  } catch (error: any) {
+    console.error('[API /api/passwords PATCH error]:', error);
     const errorMsg = error?.message || error?.code || (typeof error === 'object' ? JSON.stringify(error) : String(error));
     return NextResponse.json(
       { success: false, error: errorMsg, code: error?.code, detail: error?.detail },
