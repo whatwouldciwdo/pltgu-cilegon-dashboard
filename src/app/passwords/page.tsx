@@ -363,16 +363,24 @@ export default function PasswordDirectoryPage() {
 
         {/* Password Table */}
         <div className="neu-raised rounded-3xl overflow-hidden border border-white/80">
-          <div className="overflow-x-auto">
-            <table className="w-full text-left text-sm text-slate-700">
+          <div className="w-full">
+            <table className="w-full table-fixed text-left text-sm text-slate-700">
+              <colgroup>
+                <col className="w-[24%]" />
+                <col className="w-[14%]" />
+                <col className="w-[16%]" />
+                <col className="w-[21%]" />
+                <col className="w-[15%]" />
+                <col className="w-[10%]" />
+              </colgroup>
               <thead className="bg-slate-200/50 text-[11px] uppercase tracking-wider text-slate-500 border-b border-slate-200">
                 <tr>
-                  <th className="py-3.5 px-5 font-bold">Nama Akun / Device / Sistem</th>
-                  <th className="py-3.5 px-5 font-bold">IP Address</th>
-                  <th className="py-3.5 px-5 font-bold">Username</th>
-                  <th className="py-3.5 px-5 font-bold">Password</th>
-                  <th className="py-3.5 px-5 font-bold">Keterangan</th>
-                  <th className="py-3.5 px-5 font-bold text-right">Aksi</th>
+                  <th className="py-3.5 px-2 lg:px-3 font-bold">Nama Akun / Device / Sistem</th>
+                  <th className="py-3.5 px-2 lg:px-3 font-bold">IP Address</th>
+                  <th className="py-3.5 px-2 lg:px-3 font-bold">Username</th>
+                  <th className="py-3.5 px-2 lg:px-3 font-bold">Password</th>
+                  <th className="py-3.5 px-2 lg:px-3 font-bold">Keterangan</th>
+                  <th className="py-3.5 px-2 lg:px-3 font-bold text-right">Aksi</th>
                 </tr>
               </thead>
               <tbody className="divide-y divide-slate-200/60 font-sans">
@@ -399,12 +407,12 @@ export default function PasswordDirectoryPage() {
                     return (
                       <tr key={item.id} className={`hover:bg-slate-100/50 transition-colors ${item.is_pinned ? 'bg-amber-50/50' : ''}`}>
                         {/* Nama */}
-                        <td className="py-3.5 px-5 font-semibold text-slate-900">
-                          <div className="flex items-center gap-2">
+                        <td className="py-3.5 px-2 lg:px-3 font-semibold text-slate-900">
+                          <div className="flex min-w-0 items-center gap-1.5">
                             <Server className="w-4 h-4 text-slate-400 flex-shrink-0" />
-                            <span>{item.nama}</span>
+                            <span className="min-w-0 break-words">{item.nama}</span>
                             {item.is_pinned && (
-                              <span className="inline-flex items-center gap-1 rounded-full bg-amber-100 px-2 py-0.5 text-[10px] font-bold text-amber-700">
+                              <span className="inline-flex shrink-0 items-center gap-1 rounded-full bg-amber-100 px-1.5 py-0.5 text-[10px] font-bold text-amber-700">
                                 <Pin className="w-3 h-3 fill-current" /> PIN
                               </span>
                             )}
@@ -412,9 +420,9 @@ export default function PasswordDirectoryPage() {
                         </td>
 
                         {/* IP */}
-                        <td className="py-3.5 px-5 font-mono text-xs text-slate-600">
+                        <td className="py-3.5 px-2 lg:px-3 font-mono text-xs text-slate-600">
                           {item.ip ? (
-                            <span className="bg-slate-200/70 px-2 py-0.5 rounded-md">
+                            <span className="break-all bg-slate-200/70 px-1.5 py-0.5 rounded-md">
                               {item.ip}
                             </span>
                           ) : (
@@ -423,12 +431,12 @@ export default function PasswordDirectoryPage() {
                         </td>
 
                         {/* Username */}
-                        <td className="py-3.5 px-5 font-mono text-xs text-slate-800 font-medium">
-                          <div className="flex items-center gap-1.5">
-                            <span>{item.username}</span>
+                        <td className="py-3.5 px-2 lg:px-3 font-mono text-xs text-slate-800 font-medium">
+                          <div className="flex min-w-0 items-center gap-1">
+                            <span className="min-w-0 break-all">{item.username}</span>
                             <button
                               onClick={() => copyToClipboard(item.username, item.id * 1000)}
-                              className="text-slate-400 hover:text-slate-700 transition-colors"
+                              className="shrink-0 text-slate-400 hover:text-slate-700 transition-colors"
                               title="Salin Username"
                             >
                               {copiedId === item.id * 1000 ? (
@@ -441,21 +449,21 @@ export default function PasswordDirectoryPage() {
                         </td>
 
                         {/* Password */}
-                        <td className="py-3.5 px-5">
-                          <div className="flex items-center gap-2">
-                            <span className="font-mono text-xs bg-white/80 border border-slate-200/80 px-2.5 py-1 rounded-lg min-w-[130px] inline-block">
+                        <td className="py-3.5 px-2 lg:px-3">
+                          <div className="flex min-w-0 items-center gap-0.5 lg:gap-1">
+                            <span className="min-w-0 flex-1 truncate rounded-lg border border-slate-200/80 bg-white/80 px-1.5 py-1 font-mono text-xs">
                               {isVisible ? item.password : '••••••••••••'}
                             </span>
                             <button
                               onClick={() => togglePasswordVisibility(item.id)}
-                              className="text-slate-400 hover:text-purple-600 transition-colors p-1"
+                              className="shrink-0 text-slate-400 hover:text-purple-600 transition-colors p-0.5"
                               title={isVisible ? 'Sembunyikan' : 'Tampilkan'}
                             >
                               {isVisible ? <EyeOff className="w-4 h-4" /> : <Eye className="w-4 h-4" />}
                             </button>
                             <button
                               onClick={() => copyToClipboard(item.password, item.id)}
-                              className="text-slate-400 hover:text-emerald-600 transition-colors p-1"
+                              className="shrink-0 text-slate-400 hover:text-emerald-600 transition-colors p-0.5"
                               title="Salin Password"
                             >
                               {copiedId === item.id ? (
@@ -468,13 +476,15 @@ export default function PasswordDirectoryPage() {
                         </td>
 
                         {/* Keterangan */}
-                        <td className="py-3.5 px-5 text-xs text-slate-500 max-w-xs truncate">
-                          {item.keterangan || <span className="text-slate-300">-</span>}
+                        <td className="py-3.5 px-2 lg:px-3 text-xs text-slate-500">
+                          <span className="block truncate" title={item.keterangan || undefined}>
+                            {item.keterangan || <span className="text-slate-300">-</span>}
+                          </span>
                         </td>
 
                         {/* Aksi */}
-                        <td className="py-3.5 px-5 text-right whitespace-nowrap">
-                          <div className="flex items-center justify-end gap-1.5">
+                        <td className="py-3.5 px-2 lg:px-3 text-right">
+                          <div className="flex items-center justify-end gap-0.5">
                             <button
                               onClick={() => handleTogglePin(item)}
                               disabled={pinningId === item.id}
